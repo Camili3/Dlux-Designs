@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-Lux Designs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #EFDECA;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: 4000px;
+            
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #463018;
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            background-image: url('dlux2.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+        }
+        .logo-container {
+            
+            align-items: center;
+        }
+        .text {
+            margin-left: 60px;
+            text-decoration: none;
+            color: #EFDECA;
+            cursor: pointer; 
+        }
+        .text-links-container {
+            display: flex;
+            margin-right: auto;
+        }
+        .text:hover {
+            color:#CE9859;
+        }
+        .buttons {
+            display: flex;
+        }
+        .buttons button {
+            margin-left: 10px;
+            padding: 10px 20px;
+            box-shadow: 0 0 0 1px #EFDECA; 
+            background-color:#463018 ;
+            color:#EFDECA;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        #regbutton{
+            
+            background-color:#EFDECA ;
+            color:#463018;
+        }
+        .buttons button:hover {
+            background-color: #EFDECA; 
+            color:#463018;
+        }
+        .buttons #regbutton:hover {
+            background-color: #463018; 
+            color:#EFDECA;
+        }
+        .logoprin {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logoprin img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .colebot{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .colebot button {
+            background-color: #CE9859;
+            color: aliceblue;
+            margin-left: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+
+        }
+        .textosdesc{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin-top: 0px;
+            gap: 20px;
+            text-align: left;
+            justify-content: space-around;
+        }
+        .textosdesc p {
+            padding: 5px; 
+            color:#CE9859;
+            font-size: 40px;
+        }
+      
+        .textosdesc p span {
+            color: black;
+            font-size: 15px;
+
+        }
+       
+        /*.vermasbot{
+            display: flex;
+            justify-content: space-around;
+            margin-left: 0px;
+            gap: 5px;
+            align-items: flex-start;
+        }*/
+        .vermasbot button{
+            justify-content: space-around;
+            align-items: baseline;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #CE9859; 
+            color:aliceblue;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            
+        }
+
+        .productos{
+            background-color: rgba(195, 170, 141, 0.68); 
+            color: #EFDECA;
+            margin-top: 20px;
+            height: 600px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .productos img{
+            margin: 70px;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .productos p span{
+            color: #B36C64;
+            font-size: 30px;
+        }
+        .productos p{
+            padding: 5px;
+            color: black;
+            font-size: 15px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        .content {
+            padding: 20px;
+        }
+        .content input[type="file"] {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo"></div>
+        <div class="text-links-container">
+            <a href="#" class="text">Catálogos</a>
+            <a href="#" class="text">Sobre Nosotros</a>
+        </div>
+        
+        <div class="buttons">
+            <button>Iniciar Sesión</button>
+            <button id="regbutton">Registrarse</button>
+        </div>
+    </div>
+    <div class="logoprin">
+        <img src="leonprin.png" alt="Logo Principal" >
+        
+    </div>
+    <div class="colebot">
+        <button>Ver Colección</button>
+    </div>
+
+    <div class="textosdesc">
+        <div>
+            <p><strong>Descubre</strong><br><span>¡Explora tus gustos con nosotros y encuentra la perfecta<br>expresión de tu estilo!</span></p>
+            <div class="vermasbot">
+                <button>Ver Más</button>
+            </div>
+        </div>
+        <div>
+            <p><strong>Personaliza</strong><br><span>¡Personaliza tu camisa o taza a tu gusto! Diseña cada<br>detalle para reflejar tu estilo único y crear piezas<br>verdaderamente tuyas.</span></p>
+            <div class="vermasbot">
+                <button>Ver Más</button>
+            </div>
+        </div>
+        <div>
+            <p><strong>Disfruta</strong><br><span>¡No te preocupes! Con nuestro servicio de entrega a<br>domicilio, tu pedido llegará directamente a tu puerta,<br>para que puedas disfrutar de tus productos<br>personalizados sin salir de casa.</span></p>
+            <div class="vermasbot">
+                <button>Ver Más</button>
+            </div>
+        </div>
+    </div>
+
+   <div class="productos">
+      <img src="Dos.PNG" alt="productos">
+      <p><strong><span>Temporada Navideña</span></strong><br>¡Celebra la magia de la temporada con nuestros pocillos personalizados de<br>Navidad! Sumérgete en el espíritu festivo con diseños encantadores que<br>
+        capturan la alegría y la calidez de esta época del año. Desde renos juguetones<br>hasta elegantes árboles de Navidad, nuestros pocillos añadirán un toque<br>
+        especial a tus momentos favoritos durante las fiestas. Ya sea para disfrutar de<br>un delicioso chocolate caliente junto a la chimenea o para brindar con tus seres<br>
+        queridos, nuestros pocillos personalizados harán que cada sorbo sea aún más<br>
+        memorable. ¡Haz tus celebraciones más especiales con estos encantadores<br>pocillos de Navidad!.
+
+      </p>
+   </div>
+
+    
+    
+    <div class="content">
+        <input type="file" accept="image/*">
+        <br>
+        <span>Descripción de la imagen:</span>
+    </div>
+</body>
+</html>
