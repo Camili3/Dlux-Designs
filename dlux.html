@@ -237,48 +237,59 @@
             margin-bottom: 10px;
         }
 
-          .question {
-        background-color: #EFDECA;
-        width: 100%;
-        height: 64px;
-        display: inline-flex
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 20px; /* Espacio entre preguntas */
-         }
+   
+  
+        
+   
 
-          .question-text {
-        width: 90%;
-        text-align: center;
-        color: rgba(0, 0, 0, 0.80);
-        font-size: 36px;
-        font-family: Montserrat;
-        font-weight: 400;
-        line-height: 50px;
-        word-wrap: break-word;
+       
+
+              .container {
+            width: 90%;
+            max-width: 1520px;
+            margin: auto; /* Centrar horizontalmente */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Apilar elementos verticalmente */
+            margin-top: 20px; /* Ajustar según sea necesario */
         }
 
-           .container {
-        width: 90%; /* Ancho del 90% del contenedor padre */
-        max-width: 1520px; /* Ancho máximo de 1520px */
-        margin: auto; /* Margen automático para centrar horizontalmente */
+        .preguntastitulo {
+            width: 100%; /* Ocupar todo el ancho disponible */
+            height: auto; /* Altura automática según el contenido */
+            background-color: #CE9859;
+            color: white;
+            font-size: 3vw;
+            font-family: Montserrat, Arial, sans-serif;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: center;
+            margin-bottom: 20px; /* Espacio entre el título y las preguntas */
+            padding: 10px 0; /* Espaciado interno */
         }
-        
-        
-    .preguntastitulo {
-        background-color: #CE9859;
-        width: 90%; /* Ancho del 90% del contenedor padre */
-        max-width: 1520px; /* Ancho máximo de 1520px */
-        height: 10vh; /* Altura del 10% del alto del viewport */
-        margin: auto; /* Margen automático a la izquierda y a la derecha para centrar horizontalmente */
-        text-align: center;
-        color: white;
-        font-size: 3vw; /* Tamaño de fuente del 3% del viewport width */
-        font-family: Montserrat, Arial, sans-serif;
-        font-weight: 400;
-        line-height: 1.5; /* Relación de aspecto de línea */
-        word-wrap: break-word; 
-    }
+
+        .question {
+            width: 100%;
+            background-color: #EFDECA;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: 64px;
+            margin-bottom: 20px;
+        }
+
+        .question-text {
+            width: 90%;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.80);
+            font-size: 36px;
+            font-family: Montserrat;
+            font-weight: 400;
+            line-height: 50px;
+            word-wrap: break-word;
+        }
+
 
         .content{
             display: inline-flex
