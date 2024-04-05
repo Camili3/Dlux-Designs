@@ -1,28 +1,27 @@
 document.addEventListener("DOMContentLoaded", function() {
-    //selecciona todos los botones de preguntas frecuentes
+    // Selecciona todos los botones de preguntas frecuentes
     var buttons = document.querySelectorAll('.arrow');
 
-    //itera sobre los botones y añade un event listener a cada uno
+    // Itera sobre los botones y añade un event listener a cada uno
     buttons.forEach(function(button) {
-        //agrega un event listener de clic a cada botón
+        // Agrega un event listener de clic a cada botón
         button.addEventListener('click', function() {
-            //encuentra el elemento padre li del botón
-            var parentLi = button.parentElement;
+            // Encuentra el elemento padre de la flecha (div.question)
+            var parentQuestion = button.closest('.question');
 
-            //encuentra el siguiente elemento hermano (la respuesta)
-            var answer = parentLi.querySelector('.answer');
+            // Encuentra la respuesta correspondiente a la pregunta
+            var answer = parentQuestion.querySelector('.answer');
 
-            //alterna la clase active en la respuesta para mostrarla/ ocultarla
+            // Alterna la clase 'open' en el contenedor de la respuesta para mostrar/ocultar la respuesta
             answer.classList.toggle('active');
 
-            //cambia el texto del botón y el estilo según si la respuesta está activa o no
+            // Cambia el texto y estilo del botón según si la respuesta está activa o no
             if (answer.classList.contains('active')) {
                 button.textContent = '▲';
-                button.style.backgroundColor = '#B36C64'; // Cambiar el color del botón activo si es necesario
             } else {
                 button.textContent = '▼';
-                button.style.backgroundColor = ''; // Restablecer el color del botón al valor predeterminado
             }
         });
-    });
+    });   
 });
+
