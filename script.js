@@ -23,5 +23,33 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });   
+
+     // Manejo de la carga de la imagen
+     var designUpload = document.getElementById('designUpload');
+     var designPreview = document.getElementById('designPreview');
+ 
+     designUpload.addEventListener('change', function(event) {
+         var file = event.target.files[0];
+         if (file) {
+             var reader = new FileReader();
+             reader.onload = function(e) {
+                 designPreview.src = e.target.result;
+                 designPreview.style.display = 'block';
+             }
+             reader.readAsDataURL(file);
+         } else {
+             designPreview.style.display = 'none';
+             designPreview.src = '#';
+         }
+     });
+ 
+     // Manejo del envío del formulario
+     var uploadForm = document.getElementById('uploadForm');
+     uploadForm.addEventListener('submit', function(event) {
+         event.preventDefault();
+         // Aquí puedes agregar la lógica para enviar la imagen al servidor
+         alert('Diseño subido con éxito!');
+     });
+
 });
 

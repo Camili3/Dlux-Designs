@@ -86,12 +86,27 @@
 
     </section>
 
+      <!-- New Section: Upload Your Design -->
+  <section class="upload-section">
+    <h1>Sube tu propio diseño</h1>
+    <form id="uploadForm">
+        <label for="designUpload">Selecciona una imagen:</label>
+        <input type="file" id="designUpload" accept="image/*">
+        <div class="preview-container">
+            <img id="designPreview" src="#" alt="Vista previa del diseño" style="display: none;">
+        </div>
+        <button type="submit">Subir Diseño</button>
+    </form>
+</section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <p>&copy; 2024 D-Lux Designs. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

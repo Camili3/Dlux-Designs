@@ -18,12 +18,41 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .producto_sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 80px;
     margin: 0 auto;
 }
+
+.productoimg img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor */
+}
+
+.productoimg2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.productoimg2 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor */
+}
+
 
 
 .producto_title {
@@ -121,15 +150,15 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: center; /* Ajustar el espacio entre los elementos */
-    padding: 80px;
-    width: 100%; /* Usar el ancho completo */
-    max-width: 1200px; /* Definir un ancho máximo para evitar que la sección se extienda demasiado */
+    align-items: center;
+    padding: 20px;
+
+    height: 100%;
+   /* Definir un ancho máximo para evitar que la sección se extienda demasiado */
     margin: 0 auto; /* Centrar horizontalmente la sección */
+   
 }
 
-.productoimg2{
-    margin-left: 50px;
-}
 
 .Articulo {
     width: 837px;
@@ -138,7 +167,8 @@ h1 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 28px;
+    margin: 20px;
+    gap: 20px;
   }
   
   .TituloDelArticulo {
@@ -227,12 +257,10 @@ h1 {
 
   .BodyE {
     width: 100%;
-    max-width: 1680px;
-    height: 359px;
-    padding: 34px 80px 41px 80px;
+
     background: #EFDECA;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -248,8 +276,6 @@ h1 {
 
 .TemporadaNavideña {
     width: 100%;
-    max-width: 697px;
-    height: 36px;
     text-align: center;
     color: #B36C64;
     font-size: 24px;
@@ -294,14 +320,146 @@ h1 {
     background-color: #B36C64; /* Cambio de color al hacer hover */
 }
 
+.upload-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #EFDECA;
+    border: 1px solid #CE9859;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.upload-section h1 {
+    color: #CE9859;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+
+.upload-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #463018;
+}
+
+.upload-section input[type="file"] {
+    margin-bottom: 20px;
+}
+
+.preview-container {
+    margin-top: 20px;
+}
+
+.preview-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #CE9859;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.upload-section button {
+    padding: 10px 20px;
+    background-color: #CE9859;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.upload-section button:hover {
+    background-color: #B36C64;
+    color: #fff;
+}
+
+
+
 
 
 @media screen and (max-width: 1300px) {
 
-    .producto_content {
-        width: 50%;
-        flex-wrap: wrap;
-        
+    /* Estilo para la flecha */
+    .arrow {
+    
+        left: -4%; /* La alineamos a la derecha del elemento padre con un margen del 5% */
+    
     }
+    
 
-}
+    .producto_content {
+        flex-wrap: wrap;
+    }
+    
+    .text-links-container {
+    
+            align-items: center;
+        margin-right: 0px;
+    }
+    
+    
+        .header {
+            flex-direction: column;
+            align-items: center;
+        
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+        }
+        .menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .menu-toggle:checked + .menu {
+            display: flex;
+        }
+        .menu-icon {
+            display: block;
+            margin-left: auto;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .text {
+            margin: 10px;
+        }
+        .colebot {
+            text-align: center;
+        }
+        .textosdesc {
+            flex-direction: column;
+            margin: 20px;
+    
+        }
+        .productos .navidad{
+            flex-direction: column;
+        }
+        .productos .thumb {
+            margin-right: 0px;
+          }
+        .textosdesc > div {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        .descripcion-container {
+            text-align: center;
+        }
+        .vermasbot {
+            margin: 0 auto;
+        }
+        .productos .descripcion {
+            width: 100%;
+        }
+        .container {
+            width: 100%;
+        }
+        .content {
+            padding: 10px;
+        }
+        .footer {
+            text-align: center;
+        }
+    }

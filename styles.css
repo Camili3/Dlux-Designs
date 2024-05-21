@@ -16,6 +16,7 @@ body {
     justify-content: space-between; /* Espacio entre los elementos */
     align-items: center;
     padding: 10px;
+   
     background-color: #463018;
 }
 
@@ -46,6 +47,7 @@ body {
 
 .buttons {
     display: flex;
+    margin: 20px;
 }
 
 .buttons button {
@@ -139,15 +141,15 @@ body {
 .textosdesc p {
     padding: 5px;
     color: #CE9859;
-    font-size: 40px;
     text-align: center;
     margin: 0; /* Eliminar el margen predeterminado */
     line-height: 1.5; /* Modificar el interlineado */
+    font-size: 25px;
 }
 
 .textosdesc p span {
     color: black;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 /* Estilos del botón "Ver Más" */
@@ -228,6 +230,7 @@ body {
 .productos .navidad {
     display: flex;
     align-items: center;
+    margin: 35px;
 }
 
 .productos .product-info {
@@ -322,7 +325,7 @@ body {
     height: auto;
     background-color: #CE9859;
     color: white;
-    font-size: 3vw;
+    font-size: 24px;
     font-family: Montserrat, Arial, sans-serif;
     font-weight: 400;
     line-height: 1.5;
@@ -346,10 +349,11 @@ body {
     position: relative; /* Hacemos que el elemento padre para la flecha sea relativo */
     text-align: center;
     color: rgba(0, 0, 0, 0.80);
-    font-size: 24px; /* Tamaño de fuente ajustado */
+ /* Tamaño de fuente ajustado */
     font-family: Montserrat, Arial, sans-serif; /* Fuente ajustada */
     font-weight: 400;
     line-height: 1.5; /* Espaciado de línea */
+    font-size: 24px;
 }
 
 .content {
@@ -358,27 +362,23 @@ body {
     align-items: center; /* Centrar horizontalmente */
     width: 100%; /* Ancho completo del contenedor */
 }
-
 /* Estilo para la flecha */
 .arrow {
     position: absolute; /* Hacemos que la flecha sea absoluta para que se posicione correctamente */
-    right: 0; /* La alineamos a la derecha del elemento padre */
+    left: -10%; /* La alineamos a la derecha del elemento padre con un margen del 5% */
     top: 50%; /* La alineamos verticalmente en el centro */
     transform: translateY(-50%); /* Corregimos la posición vertical */
     cursor: pointer; /* Cambia el cursor al puntero al pasar por encima */
     transition: transform 0.3s; /* Agrega una transición suave */
-    font-size: 27px; /* Tamaño de la flecha */
-    margin-right: -150px; /* Espacio a la derecha de la flecha */
+    font-size: 30px; /* Tamaño de la flecha como un porcentaje del ancho de la ventana */
 }
 
-/* Rotación de la flecha al abrir */
 /* Estilo para la respuesta */
 .answer {
     display: none; /* Oculta la respuesta por defecto */
     text-align: center; /* Centra el texto de la respuesta */
-    margin-top: 50px; /* Agrega un margen superior para separarla de la pregunta */
+    margin-top: 3vw; /* Margen superior relativo al tamaño de la ventana */
 }
-
 /* Estilo para el texto de la respuesta */
 .answer p {
     margin: 10px 0; /* Añade espacio alrededor del texto de la respuesta */
@@ -472,29 +472,90 @@ i{
                 0px 0px 115px rgb(228, 85, 3);
 }
 
-@media screen and (max-width: 1000px) {
-    header .text-links-container {
+/* Estilos para dispositivos móviles */
+
+@media screen and (max-width: 900px) {
+    body {
+        width: 100%;
+    }
+    }
+@media screen and (max-width: 600px) {
+
+/* Estilo para la flecha */
+.arrow {
+
+    left: -4%; /* La alineamos a la derecha del elemento padre con un margen del 5% */
+
+}
+
+.text-links-container {
+
+        align-items: center;
+	margin-right: 0px;
+}
+
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+	
+    }
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .menu-toggle:checked + .menu {
+        display: flex;
+    }
+    .menu-icon {
+        display: block;
+        margin-left: auto;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    .text {
+        margin: 10px;
+    }
+    .colebot {
         text-align: center;
     }
+    .textosdesc {
+        flex-direction: column;
+        margin: 20px;
 
-    .productos .navidad .descripcion {
-        width: 46%;
     }
-
-    .productos .thumb img {
-        max-width: 100%;
-        height: auto;
+    .productos .navidad{
+        flex-direction: column;
     }
-
     .productos .thumb {
-        width: 80%;
+        margin-right: 0px;
+      }
+    .textosdesc > div {
+        max-width: 100%;
         margin-bottom: 20px;
     }
-
+    .descripcion-container {
+        text-align: center;
+    }
+    .vermasbot {
+        margin: 0 auto;
+    }
     .productos .descripcion {
-        width: 80%;
-        text-align: justify;
-        color: #B36C64;
-        padding: 5px;
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+    }
+    .content {
+        padding: 10px;
+    }
+    .footer {
+        text-align: center;
     }
 }

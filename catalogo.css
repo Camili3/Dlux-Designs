@@ -16,11 +16,11 @@ main{
 /* Estilos de la cabecera */
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espacio entre los elementos */
     align-items: center;
     padding: 10px;
+   
     background-color: #463018;
-    color: #EFDECA;
 }
 
 
@@ -38,7 +38,6 @@ main{
     display: flex;
     margin-right: auto; /* Empujar hacia la derecha */
 }
-
 .text {
     margin-left: 60px;
     text-decoration: none;
@@ -222,3 +221,84 @@ i{
                 0px 0px 75px rgb(228, 85, 3),
                 0px 0px 115px rgb(228, 85, 3);
 }
+
+@media screen and (max-width: 600px) {
+
+    /* Estilo para la flecha */
+    .arrow {
+    
+        left: -4%; /* La alineamos a la derecha del elemento padre con un margen del 5% */
+    
+    }
+    
+    .text-links-container {
+    
+            align-items: center;
+        margin-right: 0px;
+    }
+    
+    
+        .header {
+            flex-direction: column;
+            align-items: center;
+        
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+        }
+        .menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .menu-toggle:checked + .menu {
+            display: flex;
+        }
+        .menu-icon {
+            display: block;
+            margin-left: auto;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .text {
+            margin: 10px;
+        }
+        .colebot {
+            text-align: center;
+        }
+        .textosdesc {
+            flex-direction: column;
+            margin: 20px;
+    
+        }
+        .productos .navidad{
+            flex-direction: column;
+        }
+        .productos .thumb {
+            margin-right: 0px;
+          }
+        .textosdesc > div {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        .descripcion-container {
+            text-align: center;
+        }
+        .vermasbot {
+            margin: 0 auto;
+        }
+        .productos .descripcion {
+            width: 100%;
+        }
+        .container {
+            width: 100%;
+        }
+        .content {
+            padding: 10px;
+        }
+        .footer {
+            text-align: center;
+        }
+    }
